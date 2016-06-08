@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app=tabApp>
+<head>
+  <title>Add Your Notes</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css" />
+  <script src="app/lib/angular.min.js"></script>
+  <script src="app/lib/angular-animate.min.js"></script>
+  <script src="app/lib/angular-route.min.js"></script>
+  <script src="app/app.js"></script>
+</head>
+<body>
+<div id="container" ng-controller="TabController as tabCtrl">
+	<div id="title">
+		<h1>Add Your Notes</h1>
+	</div>
+
+	<div id="tabs">
+		<ul>
+			<li ng-repeat="tab in tabCtrl.tabs" ng-class="{active: tabCtrl.isSelected(1)}">
+				<a class="tab" ng-click="tabCtrl.selectTab()">{{tab.tabName}}
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="main" ng-controller="TabData as content">
+		<div class="wrapper" ng-repeat="wrapper in content.tabContent[0]" ng-show="tabCtrl.isSelected(1)">
+			<h2>
+				{{wrapper.title}}
+			</h2>
+			<p>
+				{{wrapper.snippet}}
+			</p>
+		</div>
+
+	</div>
+</div>
+</body>
+</html>

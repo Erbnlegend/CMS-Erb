@@ -1,0 +1,74 @@
+body {
+	background: rgb(61, 63, 64);
+}
+
+p,
+a,
+i,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 44px;
+	text-align: center;
+}
+
+#title {
+	margin: 2%;
+}
+
+#tabs {
+	display: block;
+	width: 95%;
+	margin: 0 auto;
+}
+
+#main {
+	background: rgba(59, 100, 127, .8);
+	width: 95%;
+	margin: 0 auto;
+	padding: 2% 0;
+	height: auto;
+}
+
+.wrapper {
+	background: rgba(0, 0, 0, .3);
+	width: 95%;
+	margin: 0 auto 1% auto;
+	padding-bottom: 1%;
+}
+
+.wrapper h2,
+.wrapper p {
+	padding: 1%;
+	margin: 1%;
+}
+
+#tabs ul {
+	display: block;
+}
+
+#tabs ul li {
+	display: inline;
+}
+
+#tabs .tab {
+	display: inline-block;
+	background: rgba(59, 100, 127, .8);
+	font-size: 20px;
+	width: 10%;
+	margin: 0 auto;
+	padding: 1% 2%;
+}
+
+#tabs .active a {
+	background: white;
+	color: black;
+}
